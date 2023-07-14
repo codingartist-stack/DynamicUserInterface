@@ -13,3 +13,21 @@ let navBarContent = {
 };
 
 displayNavItems(navBarContent);
+
+document.addEventListener('click', (e) => {
+  console.log(e.target);
+  //   const isDropDownButton = e.target.matches('.dropdownButton');
+  //   if (!isDropDownButton && e.target.closest('.dropDown') != null) return;
+
+  //   let currentDropDown;
+
+  //   if (isDropDownButton) {
+  //     currentDropDown = e.target.closest('.dropDown');
+  //     currentDropDown.classList.toggle('.active');
+  //   }
+
+  //   document.querySelectorAll('dropDown.active').forEach((dropDown) => {
+  //     if (dropDown === currentDropDown) return;
+  //     dropDown.classList.remove('.active');
+  //   });
+});
