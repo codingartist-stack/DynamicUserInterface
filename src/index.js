@@ -16,7 +16,7 @@ displayNavItems(navBarContent);
 
 document.addEventListener('click', (e) => {
   console.log(e.target);
-  debugger;
+  //   debugger;
   //   const isDropDownButton = e.target.matches('.dropdownButton');
   //   if (!isDropDownButton && e.target.closest('.dropDown') != null) return;
 
