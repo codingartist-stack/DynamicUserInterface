@@ -1,4 +1,6 @@
 import _ from 'lodash';
 import './style.css';
 
-console.log('Connected!');
+const navigationBar = document.querySelectorAll('.navigationBar');
+
+navBarItems = [];
