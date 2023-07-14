@@ -1,3 +1,22 @@
-.hello {
-  color: darkblue;
+:root {
+  --main-bg-color: #f7f7f7;
+  --light-neutral: #f2e7d5;
+  --main-action-color: #6d9886;
+  --dark-neutral: #393e46;
+}
+
+#navigationBar {
+  display: flex;
+  gap: 1rem;
+  background-color: var(--main-action-color);
+}
+
+button {
+  all: unset;
+  font-size: larger;
+  padding: 0.5rem;
+}
+button:hover {
+  background-color: var(--light-neutral);
+  /* padding: 0.5rem; */
 }
