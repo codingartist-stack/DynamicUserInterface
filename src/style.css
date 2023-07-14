@@ -50,3 +50,7 @@ button:hover,
   opacity: 1;
   transform: translateY(0);
 }
+
+.dropDown.active {
+  border: 3px lime;
+}
