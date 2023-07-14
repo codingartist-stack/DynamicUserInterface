@@ -8,6 +8,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Dynamic User Interactions',
+      filename: 'index.html',
+      template: './src/template.html',
     }),
   ],
   output: {
