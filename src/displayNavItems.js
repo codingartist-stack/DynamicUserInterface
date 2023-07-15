@@ -1,3 +1,5 @@
+import arrow from './Images_icons/Icons/arrowDropDown.svg';
+
 const navigationBar = document.querySelector('#navigationBar');
 
 export default function displayNavItems(content) {
@@ -9,9 +11,10 @@ export default function displayNavItems(content) {
     title.classList.add('dropdownButton');
     title.textContent = `${item.dropdownTitle}`;
 
-    const dropDownIcon = document.createElement('i');
-    dropDownIcon.classList.add(`dropDownIcon`);
-    title.appendChild(dropDownIcon);
+    const arrowIcon = new Image();
+    arrowIcon.src = arrow;
+    arrowIcon.classList.add('arrowIcon');
+    title.appendChild(arrowIcon);
 
     const dropdownMenu = document.createElement('div');
     dropdownMenu.classList.add('dropdownMenu');
