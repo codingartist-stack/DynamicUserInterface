@@ -2,6 +2,7 @@ import _ from 'lodash';
 import './style.css';
 import navItem from './navClass';
 import displayNavItems from './displayNavItems';
+import menu from './Images_icons/Icons/menuIcon.svg';
 
 const navigationBar = document.querySelector('#navigationBar');
 
@@ -14,21 +15,11 @@ let navBarContent = {
 
 displayNavItems(navBarContent);
 
+const menuIcon = new Image();
+menuIcon.src = menu;
+menuIcon.classList.add('menuIcon');
+navigationBar.appendChild(menuIcon);
+
 document.addEventListener('click', (e) => {
   console.log(e.target);
-  //   debugger;
-  //   const isDropDownButton = e.target.matches('.dropdownButton');
-  //   if (!isDropDownButton && e.target.closest('.dropDown') != null) return;
-
-  //   let currentDropDown;
-
-  //   if (isDropDownButton) {
-  //     currentDropDown = e.target.closest('.dropDown');
-  //     currentDropDown.classList.toggle('.active');
-  //   }
-
-  //   document.querySelectorAll('dropDown.active').forEach((dropDown) => {
-  //     if (dropDown === currentDropDown) return;
-  //     dropDown.classList.remove('.active');
-  //   });
 });

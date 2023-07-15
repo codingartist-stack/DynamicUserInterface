@@ -12,7 +12,7 @@ body {
 #navigationBar {
   display: flex;
   gap: 1rem;
-  align-items: baseline;
+  justify-content: flex-end;
   background-color: var(--dark-neutral);
   color: var(--main-bg-color);
 }
