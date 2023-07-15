@@ -9,6 +9,10 @@ export default function displayNavItems(content) {
     title.classList.add('dropdownButton');
     title.textContent = `${item.dropdownTitle}`;
 
+    const dropDownIcon = document.createElement('i');
+    dropDownIcon.classList.add(`dropDownIcon`);
+    title.appendChild(dropDownIcon);
+
     const dropdownMenu = document.createElement('div');
     dropdownMenu.classList.add('dropdownMenu');
 
