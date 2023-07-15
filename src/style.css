@@ -32,8 +32,8 @@ button:hover {
 
 .dropdownMenu {
   position: absolute;
+  left: 1rem;
   background-color: var(--main-bg-color);
-  padding: 0.75rem;
   border-radius: 0.25rem;
   box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.2);
   opacity: 0;
@@ -48,6 +48,17 @@ button:hover {
   transform: translateY(0);
 }
 
-.dropDown.active {
-  border: 3px lime;
+.dropdownMenu > a {
+  all: unset;
+  color: var(--dark-neutral);
+  padding: 0.75rem;
+  font-size: larger;
+}
+
+.dropdownMenu > a:hover {
+  all: unset;
+  color: var(--dark-neutral);
+  background-color: var(--light-neutral);
+  padding: 0.75rem;
+  font-size: larger;
 }
