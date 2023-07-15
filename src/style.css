@@ -17,6 +17,10 @@ body {
   color: var(--main-bg-color);
 }
 
+.menuIcon {
+  display: none;
+}
+
 button {
   all: unset;
   font-size: xx-large;
