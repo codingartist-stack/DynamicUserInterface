@@ -72,7 +72,8 @@ body {
   color: var(--main-bg-color);
 }
 
-.menuIcon {
+.menuIcon,
+.closeIcon {
   display: none;
 }
 
@@ -95,6 +96,7 @@ button:hover {
 
 .arrowIcon {
   color: var(--main-bg-color);
+  font-size: medium;
 }
 
 .dropDown {
@@ -138,9 +140,44 @@ button:hover {
   #navigationBar {
     position: fixed;
     inset: 0 0 0 30%;
-
+    gap: 2rem;
     flex-direction: column;
     justify-content: flex-start;
     padding: min(20vh, 10rem) 2em;
+  }
+
+  .menuIcon,
+  .closeIcon {
+    display: none;
+    font-size: xx-large;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    padding: 0.5rem;
+  }
+
+  button:hover + .menuIcon:hover,
+  button:hover + .closeIcon:hover {
+    background-color: none;
+  }
+
+  .closeIcon {
+    display: block;
+  }
+
+  .dropdownMenu {
+    position: absolute;
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+  }
+
+  .dropDown > button:focus + .dropdownMenu {
+    opacity: 1;
+    transform: translateY(0);
+    position: relative;
+    display: grid;
+    transform: translateY(0);
   }
 }

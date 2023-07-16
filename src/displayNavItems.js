@@ -20,7 +20,7 @@ export default function displayNavItems(content) {
     //using the font for the icon
     const arrowFontIcon = document.createElement('span');
     arrowFontIcon.innerText = 'circle-down';
-    arrowFontIcon.classList.add('icoMoonFont');
+    arrowFontIcon.classList.add('icoMoonFont', 'arrowIcon');
     title.appendChild(arrowFontIcon);
 
     const dropdownMenu = document.createElement('div');

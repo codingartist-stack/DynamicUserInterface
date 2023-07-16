@@ -6,9 +6,14 @@ import menu from './Images_icons/Icons/menuIcon.svg';
 
 const navigationBar = document.querySelector('#navigationBar');
 
+const closeIcon = document.createElement('span');
+closeIcon.innerText = 'cross';
+closeIcon.classList.add('icoMoonFont', 'closeIcon');
+navigationBar.appendChild(closeIcon);
+
 const menuIconFont = document.createElement('span');
 menuIconFont.innerText = 'menu';
-menuIconFont.classList.add('icoMoonFont');
+menuIconFont.classList.add('icoMoonFont', 'menuIcon');
 navigationBar.appendChild(menuIconFont);
 
 let navBarContent = {
