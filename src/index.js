@@ -19,11 +19,6 @@ let navBarContent = {
 
 displayNavItems(navBarContent);
 
-// const menuIcon = new Image();
-// menuIcon.src = menu;
-// menuIcon.classList.add('menuIcon');
-// navigationBar.appendChild(menuIcon);
-
 document.addEventListener('click', (e) => {
   console.log(e.target);
 });
