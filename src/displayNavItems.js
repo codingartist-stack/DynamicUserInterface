@@ -1,5 +1,3 @@
-import arrow from './Images_icons/Icons/arrowDropDown.svg';
-
 const navigationBar = document.querySelector('#navigationBar');
 
 export default function displayNavItems(content) {
