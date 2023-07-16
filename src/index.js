@@ -2,19 +2,13 @@ import _ from 'lodash';
 import './style.css';
 import navItem from './navClass';
 import displayNavItems from './displayNavItems';
-import menu from './Images_icons/Icons/menuIcon.svg';
+
+const menuToggle = document.createElement('span');
+menuToggle.innerText = 'menu';
+menuToggle.classList.add('icoMoonFont', 'navToggle');
+document.body.appendChild(menuToggle);
 
 const navigationBar = document.querySelector('#navigationBar');
-
-const closeIcon = document.createElement('span');
-closeIcon.innerText = 'cross';
-closeIcon.classList.add('icoMoonFont', 'closeIcon');
-navigationBar.appendChild(closeIcon);
-
-const menuIconFont = document.createElement('span');
-menuIconFont.innerText = 'menu';
-menuIconFont.classList.add('icoMoonFont', 'menuIcon');
-navigationBar.appendChild(menuIconFont);
 
 let navBarContent = {
   title0: new navItem('title0', 'item0', 'item1', 'item2', 'item3'),
@@ -32,4 +26,16 @@ displayNavItems(navBarContent);
 
 document.addEventListener('click', (e) => {
   console.log(e.target);
+});
+
+menuToggle.addEventListener('click', (e) => {
+  if (menuToggle.innerText === 'menu') {
+    menuToggle.innerText = 'cross';
+    menuToggle.classList.add('navToggleOut');
+    navigationBar.setAttribute('data-visible', true);
+  } else if (menuToggle.innerText === 'cross') {
+    menuToggle.innerText = 'menu';
+    menuToggle.classList.remove('navToggleOut');
+    navigationBar.setAttribute('data-visible', false);
+  }
 });
