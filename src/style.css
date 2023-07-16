@@ -175,4 +175,13 @@ button:hover {
     right: 2rem;
     padding: 0.5rem; */
   }
+
+  .dropdownMenu {
+    display: none;
+  }
+
+  .dropDown > button:focus + .dropdownMenu {
+    display: grid;
+    position: relative;
+  }
 }
