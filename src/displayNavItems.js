@@ -11,16 +11,9 @@ export default function displayNavItems(content) {
     title.classList.add('dropdownButton');
     title.textContent = `${item.dropdownTitle}`;
 
-    // using an image for the icon
-    // const arrowIcon = new Image();
-    // arrowIcon.src = arrow;
-    // arrowIcon.classList.add('arrowIcon');
-    // title.appendChild(arrowIcon);
-
-    //using the font for the icon
     const arrowFontIcon = document.createElement('span');
-    arrowFontIcon.innerText = 'circle-down';
-    arrowFontIcon.classList.add('icoMoonFont', 'arrowIcon');
+    arrowFontIcon.innerText = 'chevron-down';
+    arrowFontIcon.classList.add('linearIconsFont', 'arrowIcon');
     title.appendChild(arrowFontIcon);
 
     const dropdownMenu = document.createElement('div');

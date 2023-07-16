@@ -5,7 +5,7 @@ import displayNavItems from './displayNavItems';
 
 const menuToggle = document.createElement('span');
 menuToggle.innerText = 'menu';
-menuToggle.classList.add('icoMoonFont', 'navToggle');
+menuToggle.classList.add('linearIconsFont', 'navToggle');
 document.body.appendChild(menuToggle);
 
 const navigationBar = document.querySelector('#navigationBar');

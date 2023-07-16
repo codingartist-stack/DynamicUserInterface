@@ -60,6 +60,11 @@
   src: url(./fonts/IcoMoon/IcoMoon-Free.ttf);
 }
 
+@font-face {
+  font-family: 'linearIcons';
+  src: url(./fonts/Linearicons/Linearicons-Free.ttf);
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -80,6 +85,10 @@ body {
 
 .icoMoonFont {
   font-family: 'IcoMoon';
+}
+
+.linearIconsFont {
+  font-family: 'linearIcons';
 }
 
 button {
