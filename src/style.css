@@ -7,62 +7,52 @@
 
 @font-face {
   font-family: 'Lato-Regular';
-  src: url(./fonts/Lato-Regular.ttf);
+  src: url(./fonts/Lato/Lato-Regular.ttf);
 }
 
 @font-face {
   font-family: 'Lato-Black';
-  src: url(./fonts/Lato-Black.ttf);
+  src: url(./fonts/Lato/Lato-Black.ttf);
 }
 
 @font-face {
   font-family: 'Lato-BlackItalic';
-  src: url(./fonts/Lato-BlackItalic.ttf);
+  src: url(./fonts/Lato/Lato-BlackItalic.ttf);
 }
 
 @font-face {
   font-family: 'Lato-Bold';
-  src: url(./fonts/Lato-Bold.ttf);
+  src: url(./fonts/Lato/Lato-Bold.ttf);
 }
 
 @font-face {
   font-family: 'Lato-BoldItalic';
-  src: url(./fonts/Lato-BoldItalic.ttf);
+  src: url(./fonts/Lato/Lato-BoldItalic.ttf);
 }
 
 @font-face {
   font-family: 'Lato-Italic';
-  src: url(./fonts/Lato-Italic.ttf);
+  src: url(./fonts/Lato/Lato-Italic.ttf);
 }
 
 @font-face {
   font-family: 'Lato-Light';
-  src: url(./fonts/Lato-Light.ttf);
+  src: url(./fonts/Lato/Lato-Light.ttf);
 }
 
 @font-face {
   font-family: 'Lato-LightItalic';
-  src: url(./fonts/Lato-LightItalic.ttf);
+  src: url(./fonts/Lato/Lato-LightItalic.ttf);
 }
 
 @font-face {
   font-family: 'Lato-Thin';
-  src: url(./fonts/Lato-Thin.ttf);
+  src: url(./fonts/Lato/Lato-Thin.ttf);
 }
 
 @font-face {
   font-family: 'Lato-ThinItalic';
-  src: url(./fonts/Lato-ThinItalic.ttf);
-}
-
-@font-face {
-  font-family: 'Rock-Salt';
-  src: url(./fonts/RockSalt-Regular.ttf);
-}
-
-@font-face {
-  font-family: 'SpecialElite-Regular';
-  src: url(./fonts/SpecialElite-Regular.ttf);
+  src: url(./fonts/Lato/Lato-ThinItalic.ttf);
 }
 
 @font-face {
@@ -86,12 +76,17 @@ body {
   display: none;
 }
 
+.icoMoonFont {
+  font-family: 'IcoMoon';
+}
+
 button {
   all: unset;
   font-size: xx-large;
   padding: 0.5rem;
   display: flex;
   align-items: center;
+  gap: 0.5rem;
 }
 
 button:hover {
