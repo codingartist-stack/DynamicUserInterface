@@ -40,11 +40,16 @@ export default function displayImages(images) {
     imageIndicator.classList.add('icoMoonFont');
     imageIndicator.classList.add('carousel__indicator');
     imageIndicator.setAttribute('data-indicator', `${i}`);
+
+    if (i === 1) {
+      imageIndicator.classList.add('carousel__activeIndicator');
+    }
+
     carouselNavIndicators.appendChild(imageIndicator);
   }
 
   const firstImage = images[0];
-  firstImage.classList.add('firstImage');
+  firstImage.classList.add('activeSlide');
 }
 
 displayImages(carouselImages);
