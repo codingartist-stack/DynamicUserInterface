@@ -54,3 +54,7 @@ export default function displayImages(images) {
 }
 
 displayImages(carouselImages);
+const slideWidth = carouselImages[0].getBoundingClientRect().width;
+console.log(slideWidth);
+
+carouselImages.forEach;
