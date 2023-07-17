@@ -199,6 +199,7 @@ button:hover {
   height: 600px;
   width: 80%;
   margin: auto;
+  padding: 2rem;
 }
 
 .carousel__image > img {
@@ -242,4 +243,16 @@ button:hover {
 
 .carousel__nav {
   background-color: pink;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  gap: 15px;
+}
+
+.carousel__indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  background: black;
 }

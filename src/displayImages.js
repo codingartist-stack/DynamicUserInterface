@@ -25,7 +25,25 @@ const carouselTrack = document.querySelector('.carousel__track');
 const carouselNavIndicators = document.querySelector('.carousel__nav');
 
 export default function displayImages(images) {
-  for (const image of images) {
+  //   for (const image of images) {
+  //     const imageLineItem = document.createElement('li');
+  //     imageLineItem.classList.add('carousel__image');
+  //     imageLineItem.classList.add('carousel__slide');
+  //     imageLineItem.appendChild(image);
+  //     carouselTrack.appendChild(imageLineItem);
+
+  //     const imageIndicator = document.createElement('button');
+  //     imageIndicator.classList.add('icoMoonFont');
+  //     imageIndicator.classList.add('carousel__indicator');
+  //     carouselNavIndicators.appendChild(imageIndicator);
+
+  //     if (image === images.length - 1) {
+  //       imageLineItem.classList.add('currentSlide');
+  //     }
+  //   }
+  for (let index = 0; index < images.length; index++) {
+    const image = images[index];
+
     const imageLineItem = document.createElement('li');
     imageLineItem.classList.add('carousel__image');
     imageLineItem.classList.add('carousel__slide');
@@ -33,9 +51,13 @@ export default function displayImages(images) {
     carouselTrack.appendChild(imageLineItem);
 
     const imageIndicator = document.createElement('button');
-    imageIndicator.innerText = 'radio-checked2';
     imageIndicator.classList.add('icoMoonFont');
+    imageIndicator.classList.add('carousel__indicator');
     carouselNavIndicators.appendChild(imageIndicator);
+
+    if (index === images.length - 1) {
+      imageLineItem.classList.add('currentSlide');
+    }
   }
 }
 
