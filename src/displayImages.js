@@ -52,7 +52,6 @@ export default function displayImages(images) {
     //OffSet Images
 
     const slideWidth = carouselImages[0].getBoundingClientRect().width;
-    console.log(slideWidth);
 
     imageLineItem.style.left = slideWidth * i + 'px';
 
