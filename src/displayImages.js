@@ -22,12 +22,20 @@ carouselImages[4] = new Image();
 carouselImages[4].src = waterCastel;
 
 const carouselTrack = document.querySelector('.carousel__track');
+const carouselNavIndicators = document.querySelector('.carousel__nav');
 
 export default function displayImages(images) {
   for (const image of images) {
     const imageLineItem = document.createElement('li');
+    imageLineItem.classList.add('carousel__image');
+    imageLineItem.classList.add('carousel__slide');
     imageLineItem.appendChild(image);
     carouselTrack.appendChild(imageLineItem);
+
+    const imageIndicator = document.createElement('button');
+    imageIndicator.innerText = 'radio-checked2';
+    imageIndicator.classList.add('icoMoonFont');
+    carouselNavIndicators.appendChild(imageIndicator);
   }
 }
 
