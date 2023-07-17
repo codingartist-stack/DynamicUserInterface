@@ -43,13 +43,11 @@ export default function displayImages(images) {
 
     if (i === 1) {
       imageIndicator.classList.add('carousel__activeIndicator');
+      imageLineItem.classList.add('activeSlide');
     }
 
     carouselNavIndicators.appendChild(imageIndicator);
   }
-
-  const firstImage = images[0];
-  firstImage.classList.add('activeSlide');
 }
 
 displayImages(carouselImages);
