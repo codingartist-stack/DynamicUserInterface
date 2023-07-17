@@ -22,10 +22,6 @@ let navBarContent = {
 
 displayNavItems(navBarContent);
 
-document.addEventListener('click', (e) => {
-  console.log(e.target);
-});
-
 menuToggle.addEventListener('click', (e) => {
   if (menuToggle.innerText === 'menu') {
     menuToggle.innerText = 'cross';
@@ -48,15 +44,28 @@ const dotsNav = document.querySelector('.carousel__nav');
 
 const currentIndicator = dotsNav.querySelector('.currentSlide');
 
+const moveToSlide = (track, currentSlide, targetSlide) => {
+  carouselTrack.style.transform =
+    'translateX( -' + targetSlide.style.left + ')';
+  currentSlide.classList.remove('currentSlide');
+  targetSlide.classList.add('currentSlide');
+};
+
+leftButton.addEventListener('click', (e) => {
+  const currentSlide = carouselTrack.querySelector('.currentSlide');
+  const prevSlide = currentSlide.previousElementSibling;
+
+  moveToSlide(carouselTrack, currentSlide, prevSlide);
+});
+
 rightButton.addEventListener('click', (e) => {
   const currentSlide = carouselTrack.querySelector('.currentSlide');
-  const nextSlideToRight = currentSlide.nextElementSibling;
+  const nextSlide = currentSlide.nextElementSibling;
 
-  console.log(nextSlideToRight);
+  moveToSlide(carouselTrack, currentSlide, nextSlide);
+});
 
-  const amountToMove = nextSlideToRight.style.left;
-
-  console.log(amountToMove);
-
-  carouselTrack.style.transform = 'translateX( -' + amountToMove + ')';
+dotsNav.addEventListener('click', (e) => {
+  const targetDot = e;
+  console.log(e.target);
 });

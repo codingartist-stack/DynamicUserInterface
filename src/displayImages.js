@@ -61,18 +61,3 @@ export default function displayImages(images) {
 }
 
 displayImages(carouselImages);
-
-const currentIndicator = dotsNav.querySelector('.currentSlide');
-
-// rightButton.addEventListener('click', (e) => {
-//   const currentSlide = carouselTrack.querySelector('.currentSlide');
-//   const nextSlideToRight = currentSlide.nextElementSibling;
-
-//   console.log(nextSlideToRight);
-
-//   const amountToMove = nextSlideToRight.style.left;
-
-//   console.log(amountToMove);
-
-//   carouselTrack.style.transform = 'translateX( -' + amountToMove + ')';
-// });
