@@ -1,4 +1,3 @@
-//images
 import architecture from './images/architecture1920.jpg';
 import castelSantangel from './images/castelSantangelo1920.jpg';
 import fairyTale from './images/fairytale1920.jpg';
