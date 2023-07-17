@@ -261,3 +261,18 @@ button:hover {
 .carousel__indicator.carousel__activeIndicator {
   background: rgb(0, 0, 0, 0.8);
 }
+
+@media (max-width: 35em) {
+  .carousel {
+    height: 300px;
+    width: 60%;
+  }
+
+  .carousel__button--left {
+    left: -30px;
+  }
+
+  .carousel__button--right {
+    right: -30px;
+  }
+}

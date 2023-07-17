@@ -23,6 +23,9 @@ carouselImages[4].src = waterCastel;
 
 const carouselTrack = document.querySelector('.carousel__track');
 const carouselNavIndicators = document.querySelector('.carousel__nav');
+const leftButton = document.querySelector('.carousel__button--left');
+const rightButton = document.querySelector('.carousel__button--right');
+const dotsNav = document.querySelector('.carousel__nav');
 
 export default function displayImages(images) {
   let i = 0;
