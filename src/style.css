@@ -126,7 +126,7 @@ button:hover {
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
-
+  z-index: 9999;
   display: grid;
 }
 
