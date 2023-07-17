@@ -37,3 +37,21 @@ menuToggle.addEventListener('click', (e) => {
     navigationBar.setAttribute('data-visible', false);
   }
 });
+
+//carousel
+
+const carouselTrack = document.querySelector('.carousel__track');
+const carouselNavIndicators = document.querySelector('.carousel__nav');
+const leftButton = document.querySelector('.carousel__button--left');
+const rightButton = document.querySelector('.carousel__button--right');
+const dotsNav = document.querySelector('.carousel__nav');
+
+// const currentIndicator = dotsNav.querySelector('.currentSlide');
+
+// console.log(currentIndicator);
+
+// rightButton.addEventListener('click', (e) => {
+//   const currentSlide = carouselTrack.querySelector('.currentSlide');
+//   const nextSlideToRight = currentSlide.nextElementSibling;
+//   // const amountToMove = nextSlideToRight.style
+// });

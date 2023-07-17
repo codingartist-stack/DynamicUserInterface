@@ -45,8 +45,8 @@ export default function displayImages(images) {
     imageIndicator.setAttribute('data-indicator', `${i}`);
 
     if (i === 1) {
-      imageIndicator.classList.add('carousel__activeIndicator');
-      imageLineItem.classList.add('activeSlide');
+      imageIndicator.classList.add('currentSlide');
+      imageLineItem.classList.add('currentSlide');
     }
 
     carouselNavIndicators.appendChild(imageIndicator);
@@ -54,7 +54,28 @@ export default function displayImages(images) {
 }
 
 displayImages(carouselImages);
-const slideWidth = carouselImages[0].getBoundingClientRect().width;
-console.log(slideWidth);
 
-carouselImages.forEach;
+//offSet Images
+
+const slideWidth = carouselImages[0].getBoundingClientRect().width;
+// console.log(slideWidth);
+
+export function offSetImgPosition(images) {
+  let j = 0;
+  for (const image of images) {
+    image.style.left = slideWidth * j + 'px';
+    j++;
+  }
+}
+
+offSetImgPosition(carouselImages);
+
+const currentIndicator = dotsNav.querySelector('.currentSlide');
+
+console.log(currentIndicator);
+
+rightButton.addEventListener('click', (e) => {
+  const currentSlide = carouselTrack.querySelector('.currentSlide');
+  const nextSlideToRight = currentSlide.nextElementSibling;
+  const amountToMove = nextSlideToRight.style.left;
+});
