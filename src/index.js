@@ -2,6 +2,7 @@ import _ from 'lodash';
 import './style.css';
 import navItem from './navClass';
 import displayNavItems from './displayNavItems';
+import './displayImages';
 
 //nav content
 

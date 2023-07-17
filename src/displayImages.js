@@ -27,5 +27,9 @@ const carouselTrack = document.querySelector('.carousel__track');
 export default function displayImages(images) {
   for (const image of images) {
     const imageLineItem = document.createElement('li');
+    imageLineItem.appendChild(image);
+    carouselTrack.appendChild(imageLineItem);
   }
 }
+
+displayImages(carouselImages);
