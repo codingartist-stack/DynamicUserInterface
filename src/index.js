@@ -3,6 +3,18 @@ import './style.css';
 import navItem from './navClass';
 import displayNavItems from './displayNavItems';
 
+//images
+import architecture from './images/architecture1920.jpg';
+import castelSantangel from './images/castelSantangelo1920.jpg';
+import fairyTale from './images/fairytale1920.jpg';
+import neuschwanstein from './images/neuschwanstein1920.jpg';
+import waterCastel from './images/waterCastel1280.jpg';
+
+const architectureImage = new Image();
+architectureImage.src = architecture;
+
+//nav content
+
 const menuToggle = document.createElement('span');
 menuToggle.innerText = 'menu';
 menuToggle.classList.add('linearIconsFont', 'navToggle');
