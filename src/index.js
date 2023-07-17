@@ -42,8 +42,6 @@ const leftButton = document.querySelector('.carousel__button--left');
 const rightButton = document.querySelector('.carousel__button--right');
 const dotsNav = document.querySelector('.carousel__nav');
 
-const currentIndicator = dotsNav.querySelector('.currentSlide');
-
 const moveToSlide = (track, currentSlide, targetSlide) => {
   carouselTrack.style.transform =
     'translateX( -' + targetSlide.style.left + ')';
@@ -66,6 +64,11 @@ rightButton.addEventListener('click', (e) => {
 });
 
 dotsNav.addEventListener('click', (e) => {
-  const targetDot = e;
-  console.log(e.target);
+  const targetDot = e.target.closest('button');
+
+  if (!targetDot) return;
+
+  const currentSlide = carouselTrack.querySelector('.currentSlide');
+  const currentIndicator = dotsNav.querySelector('.currentSlide');
+  const targetIndex = dots.findIndex((dot) => dot === targetDot);
 });
