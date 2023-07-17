@@ -5,6 +5,7 @@
   --dark-neutral: #393e46;
 }
 
+/* Fonts */
 @font-face {
   font-family: 'Lato-Regular';
   src: url(./fonts/Lato/Lato-Regular.ttf);
@@ -71,6 +72,19 @@ body {
   font-family: 'Lato-Regular', 'Courier New', Courier, monospace;
 }
 
+button {
+  all: unset;
+  font-size: xx-large;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+button:hover {
+  background-color: var(--main-action-color);
+}
+
 .icoMoonFont {
   font-family: 'IcoMoon';
 }
@@ -92,19 +106,6 @@ body {
 
 .navToggle {
   display: none;
-}
-
-button {
-  all: unset;
-  font-size: xx-large;
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-button:hover {
-  background-color: var(--main-action-color);
 }
 
 .arrowIcon {
