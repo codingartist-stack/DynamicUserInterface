@@ -68,6 +68,7 @@
 body {
   margin: 0;
   overflow-x: hidden;
+  font-family: 'Lato-Regular', 'Courier New', Courier, monospace;
 }
 
 #navigationBar {
