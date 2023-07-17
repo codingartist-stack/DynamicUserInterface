@@ -37,45 +37,42 @@ export default function displayImages(images) {
     imageLineItem.appendChild(image);
     carouselTrack.appendChild(imageLineItem);
 
-    i++;
-
     const imageIndicator = document.createElement('button');
     imageIndicator.classList.add('icoMoonFont');
     imageIndicator.classList.add('carousel__indicator');
     imageIndicator.setAttribute('data-indicator', `${i}`);
 
-    if (i === 1) {
+    if (i === 0) {
       imageIndicator.classList.add('currentSlide');
       imageLineItem.classList.add('currentSlide');
     }
 
     carouselNavIndicators.appendChild(imageIndicator);
+
+    //OffSet Images
+
+    const slideWidth = carouselImages[0].getBoundingClientRect().width;
+    console.log(slideWidth);
+
+    imageLineItem.style.left = slideWidth * i + 'px';
+
+    i++;
   }
 }
 
 displayImages(carouselImages);
 
-//offSet Images
-
-const slideWidth = carouselImages[0].getBoundingClientRect().width;
-// console.log(slideWidth);
-
-export function offSetImgPosition(images) {
-  let j = 0;
-  for (const image of images) {
-    image.style.left = slideWidth * j + 'px';
-    j++;
-  }
-}
-
-offSetImgPosition(carouselImages);
-
 const currentIndicator = dotsNav.querySelector('.currentSlide');
 
-console.log(currentIndicator);
+// rightButton.addEventListener('click', (e) => {
+//   const currentSlide = carouselTrack.querySelector('.currentSlide');
+//   const nextSlideToRight = currentSlide.nextElementSibling;
 
-rightButton.addEventListener('click', (e) => {
-  const currentSlide = carouselTrack.querySelector('.currentSlide');
-  const nextSlideToRight = currentSlide.nextElementSibling;
-  const amountToMove = nextSlideToRight.style.left;
-});
+//   console.log(nextSlideToRight);
+
+//   const amountToMove = nextSlideToRight.style.left;
+
+//   console.log(amountToMove);
+
+//   carouselTrack.style.transform = 'translateX( -' + amountToMove + ')';
+// });

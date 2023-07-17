@@ -46,12 +46,17 @@ const leftButton = document.querySelector('.carousel__button--left');
 const rightButton = document.querySelector('.carousel__button--right');
 const dotsNav = document.querySelector('.carousel__nav');
 
-// const currentIndicator = dotsNav.querySelector('.currentSlide');
+const currentIndicator = dotsNav.querySelector('.currentSlide');
 
-// console.log(currentIndicator);
+rightButton.addEventListener('click', (e) => {
+  const currentSlide = carouselTrack.querySelector('.currentSlide');
+  const nextSlideToRight = currentSlide.nextElementSibling;
 
-// rightButton.addEventListener('click', (e) => {
-//   const currentSlide = carouselTrack.querySelector('.currentSlide');
-//   const nextSlideToRight = currentSlide.nextElementSibling;
-//   // const amountToMove = nextSlideToRight.style
-// });
+  console.log(nextSlideToRight);
+
+  const amountToMove = nextSlideToRight.style.left;
+
+  console.log(amountToMove);
+
+  carouselTrack.style.transform = 'translateX( -' + amountToMove + ')';
+});
