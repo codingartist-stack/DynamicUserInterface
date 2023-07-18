@@ -40,7 +40,12 @@ const carouselTrack = document.querySelector('.carousel__track');
 const leftButton = document.querySelector('.carousel__button--left');
 const rightButton = document.querySelector('.carousel__button--right');
 const dotsNav = document.querySelector('.carousel__nav');
-const dots = Array.from(dotsNav.children);
+
+// const slides = document.querySelectorAll('.carousel__slide');
+// slides.forEach((slide) => {
+//   slide = slide.dataset.indicator;
+//   return slide;
+// });
 
 const moveToSlide = (track, currentSlide, targetSlide) => {
   carouselTrack.style.transform =
@@ -70,6 +75,11 @@ dotsNav.addEventListener('click', (e) => {
 
   const currentSlide = carouselTrack.querySelector('.currentSlide');
   const currentIndicator = dotsNav.querySelector('.currentSlide');
-  const targetIndex = dots.findIndex((dot) => dot === targetDot);
+  const targetIndex = targetDot.dataset.indicator;
+  // const targetSlide = carouselImages[targetIndex];
+
   console.log(targetIndex);
+  // console.log(targetSlide);
+
+  // moveToSlide(carouselTrack, currentSlide, targetSlide);
 });

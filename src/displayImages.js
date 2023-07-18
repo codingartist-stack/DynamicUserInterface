@@ -31,6 +31,8 @@ export default function displayImages(images) {
     const imageLineItem = document.createElement('li');
     imageLineItem.classList.add('carousel__image');
     imageLineItem.classList.add('carousel__slide');
+
+    imageLineItem.setAttribute('data-indicator', `${i}`);
     imageLineItem.appendChild(image);
     carouselTrack.appendChild(imageLineItem);
 
