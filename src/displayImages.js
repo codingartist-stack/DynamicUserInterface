@@ -32,7 +32,7 @@ export default function displayImages(images) {
     imageLineItem.classList.add('carousel__image');
     imageLineItem.classList.add('carousel__slide');
 
-    imageLineItem.setAttribute('data-indicator', `${i}`);
+    imageLineItem.setAttribute('data-slideIndicator', `${i}`);
     imageLineItem.appendChild(image);
     carouselTrack.appendChild(imageLineItem);
 

@@ -41,12 +41,6 @@ const leftButton = document.querySelector('.carousel__button--left');
 const rightButton = document.querySelector('.carousel__button--right');
 const dotsNav = document.querySelector('.carousel__nav');
 
-// const slides = document.querySelectorAll('.carousel__slide');
-// slides.forEach((slide) => {
-//   slide = slide.dataset.indicator;
-//   return slide;
-// });
-
 const moveToSlide = (track, currentSlide, targetSlide) => {
   carouselTrack.style.transform =
     'translateX( -' + targetSlide.style.left + ')';
