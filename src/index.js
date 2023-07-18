@@ -42,7 +42,6 @@ const rightButton = document.querySelector('.carousel__button--right');
 const dotsNav = document.querySelector('.carousel__nav');
 
 const slides = document.querySelectorAll('[data-slideIndicator]');
-// console.log(slides.length - 1);
 
 const moveToSlide = (track, currentSlide, targetSlide) => {
   carouselTrack.style.transform =
@@ -56,14 +55,29 @@ const updateDots = (currentIndicator, targetDot) => {
   targetDot.classList.add('currentSlide');
 };
 
+const hideShowArrows = (slides, leftButton, rightButton, targetIndex) => {
+  if (targetIndex == 0) {
+    leftButton.classList.add('isHidden');
+    rightButton.classList.remove('isHidden');
+  } else if (targetIndex == slides.length - 1) {
+    leftButton.classList.remove('isHidden');
+    rightButton.classList.add('isHidden');
+  } else {
+    leftButton.classList.remove('isHidden');
+    rightButton.classList.remove('isHidden');
+  }
+};
+
 leftButton.addEventListener('click', (e) => {
   const currentSlide = carouselTrack.querySelector('.currentSlide');
   const prevSlide = currentSlide.previousElementSibling;
   const currentIndicator = dotsNav.querySelector('.currentSlide');
   const prevDot = currentIndicator.previousElementSibling;
+  const prevIndex = prevSlide.dataset.slideindicator;
 
   moveToSlide(carouselTrack, currentSlide, prevSlide);
   updateDots(currentIndicator, prevDot);
+  hideShowArrows(slides, leftButton, rightButton, prevIndex);
 });
 
 rightButton.addEventListener('click', (e) => {
@@ -71,9 +85,11 @@ rightButton.addEventListener('click', (e) => {
   const nextSlide = currentSlide.nextElementSibling;
   const currentIndicator = dotsNav.querySelector('.currentSlide');
   const nextDot = currentIndicator.nextElementSibling;
+  const nextIndex = nextSlide.dataset.slideindicator;
 
   moveToSlide(carouselTrack, currentSlide, nextSlide);
   updateDots(currentIndicator, nextDot);
+  hideShowArrows(slides, leftButton, rightButton, nextIndex);
 });
 
 dotsNav.addEventListener('click', (e) => {
@@ -88,15 +104,5 @@ dotsNav.addEventListener('click', (e) => {
 
   moveToSlide(carouselTrack, currentSlide, targetSlide);
   updateDots(currentIndicator, targetDot);
-
-  if (targetIndex == 0) {
-    leftButton.classList.add('isHidden');
-    rightButton.classList.remove('isHidden');
-  } else if (targetIndex == slides.length - 1) {
-    leftButton.classList.remove('isHidden');
-    rightButton.classList.add('isHidden');
-  } else {
-    leftButton.classList.remove('isHidden');
-    rightButton.classList.remove('isHidden');
-  }
+  hideShowArrows(slides, leftButton, rightButton, targetIndex);
 });
