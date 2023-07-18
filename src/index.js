@@ -89,16 +89,12 @@ dotsNav.addEventListener('click', (e) => {
   moveToSlide(carouselTrack, currentSlide, targetSlide);
   updateDots(currentIndicator, targetDot);
 
-  console.log(targetIndex);
-  console.log(slides.length - 1);
-
-  if (targetIndex === 0) {
+  if (targetIndex == 0) {
     leftButton.classList.add('isHidden');
     rightButton.classList.remove('isHidden');
-  } else if (targetIndex === slides.length - 1) {
+  } else if (targetIndex == slides.length - 1) {
     leftButton.classList.remove('isHidden');
     rightButton.classList.add('isHidden');
-    console.log('what is happening');
   } else {
     leftButton.classList.remove('isHidden');
     rightButton.classList.remove('isHidden');
