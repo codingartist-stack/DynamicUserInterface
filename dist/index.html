@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic User Interactions</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <nav id="navigationBar" data-visible="false"></nav>
+    <head class="header"></head>
+    <div class="mainContent">
+      <div class="carousel">
+        <button
+          class="carousel__button linearIconsFont carousel__button--left isHidden"
+        >
+          chevron-left
+        </button>
+        <div class="carousel__track-container">
+          <ul class="carousel__track"></ul>
+        </div>
+        <button
+          class="carousel__button linearIconsFont carousel__button--right"
+        >
+          chevron-right
+        </button>
+
+        <div class="carousel__nav"></div>
+      </div>
+    </div>
+    <footer class="footer"></footer>
+  </body>
+</html>
