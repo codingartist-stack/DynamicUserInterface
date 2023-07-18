@@ -41,6 +41,9 @@ const leftButton = document.querySelector('.carousel__button--left');
 const rightButton = document.querySelector('.carousel__button--right');
 const dotsNav = document.querySelector('.carousel__nav');
 
+const slides = document.querySelectorAll('[data-slideIndicator]');
+// console.log(slides.length - 1);
+
 const moveToSlide = (track, currentSlide, targetSlide) => {
   carouselTrack.style.transform =
     'translateX( -' + targetSlide.style.left + ')';
@@ -48,18 +51,29 @@ const moveToSlide = (track, currentSlide, targetSlide) => {
   targetSlide.classList.add('currentSlide');
 };
 
+const updateDots = (currentIndicator, targetDot) => {
+  currentIndicator.classList.remove('currentSlide');
+  targetDot.classList.add('currentSlide');
+};
+
 leftButton.addEventListener('click', (e) => {
   const currentSlide = carouselTrack.querySelector('.currentSlide');
   const prevSlide = currentSlide.previousElementSibling;
+  const currentIndicator = dotsNav.querySelector('.currentSlide');
+  const prevDot = currentIndicator.previousElementSibling;
 
   moveToSlide(carouselTrack, currentSlide, prevSlide);
+  updateDots(currentIndicator, prevDot);
 });
 
 rightButton.addEventListener('click', (e) => {
   const currentSlide = carouselTrack.querySelector('.currentSlide');
   const nextSlide = currentSlide.nextElementSibling;
+  const currentIndicator = dotsNav.querySelector('.currentSlide');
+  const nextDot = currentIndicator.nextElementSibling;
 
   moveToSlide(carouselTrack, currentSlide, nextSlide);
+  updateDots(currentIndicator, nextDot);
 });
 
 dotsNav.addEventListener('click', (e) => {
@@ -70,10 +84,23 @@ dotsNav.addEventListener('click', (e) => {
   const currentSlide = carouselTrack.querySelector('.currentSlide');
   const currentIndicator = dotsNav.querySelector('.currentSlide');
   const targetIndex = targetDot.dataset.indicator;
-  // const targetSlide = carouselImages[targetIndex];
+  const targetSlide = slides[targetIndex];
+
+  moveToSlide(carouselTrack, currentSlide, targetSlide);
+  updateDots(currentIndicator, targetDot);
 
   console.log(targetIndex);
-  // console.log(targetSlide);
+  console.log(slides.length - 1);
 
-  // moveToSlide(carouselTrack, currentSlide, targetSlide);
+  if (targetIndex === 0) {
+    leftButton.classList.add('isHidden');
+    rightButton.classList.remove('isHidden');
+  } else if (targetIndex === slides.length - 1) {
+    leftButton.classList.remove('isHidden');
+    rightButton.classList.add('isHidden');
+    console.log('what is happening');
+  } else {
+    leftButton.classList.remove('isHidden');
+    rightButton.classList.remove('isHidden');
+  }
 });

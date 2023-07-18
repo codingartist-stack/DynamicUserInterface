@@ -267,6 +267,10 @@ button:hover {
   background: rgb(0, 0, 0, 0.8);
 }
 
+.isHidden {
+  display: none;
+}
+
 @media (max-width: 35em) {
   .carousel {
     height: 300px;
